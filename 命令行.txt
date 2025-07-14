@@ -1,2 +1,38 @@
-git init
-git add ./public
+安装cli
+gh auth login登录
+gh repo create 仓库名 --public 创建仓库
+--public：创建公开仓库
+--private：创建私有仓库
+--source=.：使用当前目录作为仓库内容
+--remote=origin：设置远程仓库名为 origin
+--push：创建后立即推送本地代码
+
+git init初始化一个 Git 仓库
+创建 .git 目录
+
+git add ./public  文件添加到暂存区
+准备提交
+
+git commit -m "first commit"
+创建第一次提交
+-m 后面是提交信息"
+
+git branch -M main
+创建并切换到 main 分支
+-M 是重命名当前分支为 main
+
+git remote add origin https://github.com/medanq003/test55555.git
+添加远程仓库地址
+origin 是远程仓库的别名
+URL 是你的 GitHub 仓库地址
+
+git config --global user.name "test"
+git config --global user.email "test@gmail.com"
+以上只是在本地
+
+git push -u origin main
+把代码推送到远程仓库
+-u 设置上游分支，以后可以直接用 git push 推送
+
+
+
